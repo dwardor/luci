@@ -7,12 +7,12 @@ return view.extend({
 	render: function() {
 		let m, s, o;
 
-		m = new form.Map('crowdsec', _('CrowdSec'),
+		m = new form.Map('crowdsec-firewall-bouncer', _('CrowdSec'),
 			_('Gain %s protection against malicious IPs.'.format('<a href="http://www.crowdsec.net">crowd-sourced</a>')) + '<br/>' +
 			_('Benefit from the most accurate CTI in the world.'));
 
 
-		s = m.section(form.TypedSection, 'bouncer', _('Bouncer'));
+		s = m.section(form.TypedSection, 'bouncer', _('Firewall Bouncer'));
 		s.anonymous = true;
 
 		o = s.option(form.Flag, 'enabled', _('Enable'));
